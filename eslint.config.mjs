@@ -36,6 +36,12 @@ export default tseslint.config(
           endOfLine: 'auto',
         },
       ],
+      '@typescript-eslint/no-unsafe-call': [ // this is to eliminate the  error "Unsafe call of a(n) `error` type typed value.eslint@typescript-eslint/no-unsafe-call" when creating dto and uses class-validator
+        'error',
+        {
+          allowDecorators: true,
+        },
+      ],
     },
   },
 );
