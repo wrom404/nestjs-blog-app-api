@@ -1,1 +1,29 @@
-http://localhost:4000
+GET http://localhost:4000/user
+
+
+###
+GET http://localhost:4000/user/6845abca44e5c7a91176fcd4
+
+
+###
+POST http://localhost:4000/user
+Content-Type: application/json
+
+{
+  "name": "Maria Makiling",
+  "email": "maria@example.com",
+  "role": "USER"
+}
+
+
+###
+PATCH http://localhost:4000/user/6845a85d04815ed28472e085
+Content-Type: application/json
+
+{
+  "email": "juantamad@example.code"
+}
+
+
+###
+DELETE http://localhost:4000/user/6845abca44e5c7a91176fcd4
