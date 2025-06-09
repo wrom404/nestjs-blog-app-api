@@ -1,7 +1,6 @@
 import {
   Controller,
   Get,
-  Post,
   Body,
   Patch,
   Param,
@@ -10,19 +9,12 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Role } from '@prisma/client';
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) { }
-
-  @Post()
-  create(@Body(ValidationPipe) createUserDto: CreateUserDto) {
-    console.log('createUserDto: ', createUserDto);
-    return this.userService.create(createUserDto);
-  }
 
   @Get()
   findAll(@Query('role') role?: Role) {

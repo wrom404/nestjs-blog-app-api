@@ -6,7 +6,6 @@ import {
 } from '@nestjs/common';
 import { DatabaseService } from 'src/database/database.service';
 import { Role, User } from '@prisma/client';
-import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Logger } from '@nestjs/common';
 
@@ -15,27 +14,12 @@ export class UserService {
   constructor(private readonly databaseService: DatabaseService) { }
   private readonly logger = new Logger(UserService.name)
 
-  async create(createUserDto: CreateUserDto) {
-    try {
-      const newUser = await this.databaseService.user.create({
-        data: createUserDto,
-      });
-
-      return newUser;
-    } catch (error) {
-      this.logger.error('Error creating user', error.stack); // use this logger for better consistency
-      if (error instanceof HttpException) {
-        throw error;
-      }
-      throw new InternalServerErrorException('Unexpected error occurred.');
-    }
-  }
-
   async findAll(role?: Role) {
     let users: User[] = [];
     try {
       if (role) {
         users = await this.databaseService.user.findMany({ where: { role } });
+        console.log("users: ", users)
         if (users.length === 0) {
           throw new NotFoundException(`users role ${role} not found.`);
         }

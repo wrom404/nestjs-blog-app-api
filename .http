@@ -1,29 +1,39 @@
-GET http://localhost:4000/user
-
-
-###
-GET http://localhost:4000/user/6845abca44e5c7a91176fcd4
-
+// Users
+GET http://localhost:4000/api/user
 
 ###
-POST http://localhost:4000/user
+GET http://localhost:4000/api/user/68470948446499fde05301bf
+
+###
+PATCH http://localhost:4000/api/user/68470948446499fde05301bf
 Content-Type: application/json
 
 {
-  "name": "Maria Makiling",
-  "email": "maria@example.com",
-  "role": "USER"
+  "name": "Mang P. Tomas"
+}
+
+###
+DELETE http://localhost:4000/api/user/6845a85d04815ed28472e085
+
+
+###
+//Authentication
+POST http://localhost:4000/api/auth/signin
+Content-Type: application/json
+
+{
+  "email": "tomas@example.com",
+  "password": "tomas123"
 }
 
 
 ###
-PATCH http://localhost:4000/user/6845a85d04815ed28472e085
+POST http://localhost:4000/api/auth/signup
 Content-Type: application/json
 
 {
-  "email": "juantamad@example.code"
+  "name": "Mang Tomas",
+  "email": "tomas@example.com",
+  "password": "tomas123",
+  "role": "ADMIN"
 }
-
-
-###
-DELETE http://localhost:4000/user/6845abca44e5c7a91176fcd4
