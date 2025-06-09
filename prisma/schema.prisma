@@ -18,6 +18,7 @@ model User {
   email     String   @unique
   name      String // Optional name field for user
   role      Role     @default(USER)
+  password  String?
   posts     Post[] // One-to-many relation: A user can have many posts
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
