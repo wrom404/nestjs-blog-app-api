@@ -12,7 +12,7 @@ export class AuthService {
   async signinUser(signinData: SigninDto) {
     const { email, password } = signinData;
 
-    if (!email || !password) throw new BadRequestException('Email and password are required.');
+    if (!email || !password) throw new BadRequestException('All fields are required.');
     const user = await this.databaseService.user.findUnique({
       where: {
         email: email

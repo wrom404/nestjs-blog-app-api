@@ -9,7 +9,7 @@ PATCH http://localhost:4000/api/user/68470948446499fde05301bf
 Content-Type: application/json
 
 {
-  "name": "Mang P. Tomas"
+  "name": "Mang J. Tomas"
 }
 
 ###
