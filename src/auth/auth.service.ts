@@ -4,10 +4,14 @@ import { SigninDto } from './dto/signin.dto';
 import { SignupDto } from './dto/signup.dto';
 import { hashPassword } from 'src/utils/hash-password.utils.';
 import { comparePassword } from 'src/utils/compare-password.utils';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
-  constructor(private readonly databaseService: DatabaseService) { }
+  constructor(
+    private readonly databaseService: DatabaseService,
+    private readonly jwtService: JwtService
+  ) { }
 
   async signinUser(signinData: SigninDto) {
     const { email, password } = signinData;
@@ -19,11 +23,18 @@ export class AuthService {
       }
     })
     if (!user) throw new UnauthorizedException('Email is incorrect.');
+
     const isMatch = await comparePassword(password, user.password as string);
     console.log("isMatch: ", isMatch);
+
     if (!isMatch) throw new UnauthorizedException('Password is incorrect.');
 
-    return { message: `Login successfully`, user };
+    const payload = { sub: user.id, name: user.name, role: user.role } // get and assign the user id, name and role to the payload object
+
+    const accessToken = await this.jwtService.signAsync(payload); // use signAsync function to asynchronously create a jwt. We takes javascript object contains user info (e.g. id and role) and encodes it in jwt payload
+    console.log("accessToken: ", accessToken);
+
+    return { accessToken };
   }
 
   async signupUser(signupDto: SignupDto) {
