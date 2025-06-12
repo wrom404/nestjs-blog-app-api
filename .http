@@ -1,8 +1,15 @@
 // Users
-GET http://localhost:4000/api/user
+GET http://localhost:4000/api/user 
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTcyMjE1NywiZXhwIjoxNzQ5NzI1NzU3fQ.Dt5J5cfS9dH-NUxT5_5BnVJ6nhcL-bIVzN31LAMMKFQ
 
 ###
 GET http://localhost:4000/api/user/68470948446499fde05301bf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTcyMjE1NywiZXhwIjoxNzQ5NzI1NzU3fQ.Dt5J5cfS9dH-NUxT5_5BnVJ6nhcL-bIVzN31LAMMKFQ
+
+###
+
+GET http://localhost:4000/api/user/current-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTcyMjE1NywiZXhwIjoxNzQ5NzI1NzU3fQ.Dt5J5cfS9dH-NUxT5_5BnVJ6nhcL-bIVzN31LAMMKFQ
 
 ###
 PATCH http://localhost:4000/api/user/68470948446499fde05301bf
