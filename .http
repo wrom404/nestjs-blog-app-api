@@ -4,7 +4,7 @@ GET http://localhost:4000/api/user
 
 ###
 GET http://localhost:4000/api/user/68470948446499fde05301bf
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTg3MjgyNywiZXhwIjoxNzQ5ODc2NDI3fQ.d9N15QmrpLnq-Qf6HCy-fqDSApDex-uJC3jrpjwy8WI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
 
 ###
 
@@ -45,3 +45,22 @@ Content-Type: application/json
   "password": "tomas123",
   "role": "ADMIN"
 }
+
+
+###
+// Post
+POST http://localhost:4000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+
+{
+  "title": "The Handsome Programmer",
+  "published": false,
+  "authorId": "68470948446499fde05301bf"
+}
+
+### 
+GET http://localhost:4000/api/post/68470948446499fde05301bf
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+
