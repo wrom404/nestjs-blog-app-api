@@ -13,7 +13,7 @@ import {
 import { UserService } from './user.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Role } from '@prisma/client';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from 'src/guard/auth.guard';
 import { Public } from 'src/public/public.decorator';
 
 @UseGuards(AuthGuard) // implements guard to all routes in the user controller

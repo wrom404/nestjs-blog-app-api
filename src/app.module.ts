@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { PostModule } from './post/post.module';
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -27,7 +28,8 @@ const JWT_SECRET = process.env.JWT_SECRET;
           limit: 2, // we limit the amount of request here by 2 request withing 1000 milliseconds (1 second)
         },
       ],
-    })
+    }),
+    PostModule
   ],
   controllers: [AppController],
   providers: [AppService,
