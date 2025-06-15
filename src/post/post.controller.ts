@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query, ParseBoolPipe } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, ParseBoolPipe, HttpCode } from '@nestjs/common';
 import { PostService } from './post.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
@@ -7,6 +7,7 @@ import { UpdatePostDto } from './dto/update-post.dto';
 export class PostController {
   constructor(private readonly postService: PostService) { }
 
+  @HttpCode(201)
   @Post()
   create(@Body() createPostDto: CreatePostDto) {
     return this.postService.createBlogPost(createPostDto);
@@ -22,13 +23,13 @@ export class PostController {
     return this.postService.findOne(postId);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
-    return this.postService.update(+id, updatePostDto);
+  @Patch(':postId')
+  update(@Param('postId') postId: string, @Body() updatePostDto: UpdatePostDto) {
+    return this.postService.update(postId, updatePostDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.postService.remove(+id);
+  @Delete(':postId')
+  remove(@Param('postId') postId: string) {
+    return this.postService.remove(postId);
   }
 }
