@@ -60,7 +60,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0O
 }
 
 ### 
-GET http://localhost:4000/api/post/68470948446499fde05301bf
+GET http://localhost:4000/api/post/user/68470948446499fde05301bf
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
 
+###
+GET http://localhost:4000/api/post/684e6912db969bb6a76e85cd
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
