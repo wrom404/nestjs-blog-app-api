@@ -47,8 +47,13 @@ export class PostService {
   }
 
 
-  async findOne(id: number) {
-    return `This action returns a #${id} post`;
+  async findOne(postId: string) {
+    if (!postId.trim()) throw new BadRequestException("Post ID is required.");
+
+    const post = await this.databaseService.post.findUnique({ where: { id: postId } });
+
+    if (!post) throw new NotFoundException("Post not found.");
+    return { post }
   }
 
   async update(id: number, updatePostDto: UpdatePostDto) {

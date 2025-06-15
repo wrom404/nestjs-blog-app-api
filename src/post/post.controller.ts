@@ -12,14 +12,14 @@ export class PostController {
     return this.postService.createBlogPost(createPostDto);
   }
 
-  @Get(':userId')
+  @Get('/user/:userId')
   findAll(@Param('userId') userId: string, @Query('publish', new ParseBoolPipe({ optional: true })) publish?: boolean) {
     return this.postService.findAll(userId, publish);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.postService.findOne(+id);
+  @Get(':postId')
+  findOne(@Param('postId') postId: string) {
+    return this.postService.findOne(postId);
   }
 
   @Patch(':id')
