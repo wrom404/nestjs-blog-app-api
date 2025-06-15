@@ -4,7 +4,7 @@ GET http://localhost:4000/api/user
 
 ###
 GET http://localhost:4000/api/user/68470948446499fde05301bf
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk4NDAxMSwiZXhwIjoxNzQ5OTg3NjExfQ.nHUOlQz_t0xmuSVf_swsQ_zj59SKlgUM-KYiTWt0Oz4
 
 ###
 
@@ -54,7 +54,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
 
 {
-  "title": "The Handsome Programmer",
+  "title": "The man with a book",
   "published": false,
   "authorId": "68470948446499fde05301bf"
 }
@@ -66,5 +66,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0O
 
 ###
 GET http://localhost:4000/api/post/684e6912db969bb6a76e85cd
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+
+
+###
+PATCH http://localhost:4000/api/post/684e6a7a9d9ad1a50696649b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+
+{
+  "title": "The Hobbit",
+  "published": true,
+  "authorId": "68470948446499fde05301bf"
+}
+
+
+###
+DELETE http://localhost:4000/api/post/684eacc4f149cddf703bcbaa
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA

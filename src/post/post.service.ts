@@ -22,7 +22,7 @@ export class PostService {
     });
 
     if (!newPost) throw new InternalServerErrorException('Failed to create post.');
-    return { newPost }
+    return { success: true, message: "New post created successfully.", newPost }
   }
 
   async findAll(userId: string, publish?: boolean) {
@@ -35,7 +35,7 @@ export class PostService {
       });
 
       if (!posts.length) return { message: "No posts yet." };
-      return { posts };
+      return { success: true, posts };
     }
 
     const posts = await this.databaseService.post.findMany({
@@ -43,7 +43,7 @@ export class PostService {
     });
 
     if (!posts.length) return { message: "No posts yet." };
-    return { posts };
+    return { success: true, posts };
   }
 
 
@@ -53,14 +53,29 @@ export class PostService {
     const post = await this.databaseService.post.findUnique({ where: { id: postId } });
 
     if (!post) throw new NotFoundException("Post not found.");
-    return { post }
+    return { success: true, post }
   }
 
-  async update(id: number, updatePostDto: UpdatePostDto) {
-    return `This action updates a #${id} post`;
+  async update(postId: string, updatePostDto: UpdatePostDto) {
+    if (!postId) throw new BadRequestException("Post ID is required.");
+
+    const existingPost = await this.databaseService.post.findUnique({ where: { id: postId } });
+    if (!existingPost) throw new NotFoundException("Post not found.");
+
+    const updatedPost = await this.databaseService.post.update({
+      where: { id: postId },
+      data: updatePostDto,
+    });
+    return { success: true, message: "Post updated successfully.", updatedPost };
   }
 
-  async remove(id: number) {
-    return `This action removes a #${id} post`;
+  async remove(postId: string) {
+    if (!postId) throw new BadRequestException("Post ID is required.");
+
+    const existingPost = await this.databaseService.post.findUnique({ where: { id: postId } });
+    if (!existingPost) throw new NotFoundException("Post not found.");
+
+    const deletedPost = await this.databaseService.post.delete({ where: { id: postId } });
+    return { success: true, message: "Post deleted successfully.", deletedPost };
   }
 }
