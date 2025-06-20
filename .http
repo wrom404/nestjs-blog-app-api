@@ -3,18 +3,18 @@ GET http://localhost:4000/api/user
 # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTcyMjE1NywiZXhwIjoxNzQ5NzI1NzU3fQ.Dt5J5cfS9dH-NUxT5_5BnVJ6nhcL-bIVzN31LAMMKFQ
 
 ###
-GET http://localhost:4000/api/user/68470948446499fde05301bf
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk4NDAxMSwiZXhwIjoxNzQ5OTg3NjExfQ.nHUOlQz_t0xmuSVf_swsQ_zj59SKlgUM-KYiTWt0Oz4
+GET http://localhost:4000/api/user/68556c22498e8fc27ebaca2b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 ###
 
 GET http://localhost:4000/api/user/current-user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTcyMjE1NywiZXhwIjoxNzQ5NzI1NzU3fQ.Dt5J5cfS9dH-NUxT5_5BnVJ6nhcL-bIVzN31LAMMKFQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 ###
 PATCH http://localhost:4000/api/user/68470948446499fde05301bf
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBKLiBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTg3MjgyNywiZXhwIjoxNzQ5ODc2NDI3fQ.d9N15QmrpLnq-Qf6HCy-fqDSApDex-uJC3jrpjwy8WI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 {
   "name": "Mang Tomas"
@@ -40,10 +40,10 @@ POST http://localhost:4000/api/auth/signup
 Content-Type: application/json
 
 {
-  "name": "Mang Tomas",
-  "email": "tomas@example.com",
-  "password": "tomas123",
-  "role": "ADMIN"
+  "name": "Pedro Penduko",
+  "email": "pedro@example.com",
+  "password": "pedro123",
+  "role": "USER"
 }
 
 
@@ -51,32 +51,32 @@ Content-Type: application/json
 // Post
 POST http://localhost:4000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 {
-  "title": "The man with a book",
-  "published": false,
+  "title": "A programmers book",
+  "published": true,
   "authorId": "68470948446499fde05301bf"
 }
 
 ### 
 GET http://localhost:4000/api/post/user/68470948446499fde05301bf
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 ###
-GET http://localhost:4000/api/post/684e6912db969bb6a76e85cd
+GET http://localhost:4000/api/post/68556fd7e1c94913962964f1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 
 ###
-PATCH http://localhost:4000/api/post/684e6a7a9d9ad1a50696649b
+PATCH http://localhost:4000/api/post/68556fd7e1c94913962964f1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTk2ODc1OSwiZXhwIjoxNzQ5OTcyMzU5fQ.JYTNXRMku8E0lgMbeQtFPtUuJjxYwJwvvKZQgoqRbuA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODQ3MDk0ODQ0NjQ5OWZkZTA1MzAxYmYiLCJuYW1lIjoiTWFuZyBUb21hcyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MDQyODUwMywiZXhwIjoxNzUwNDMyMTAzfQ.T7hSneRk-OX6lkSh9f4ptPlWVTanBPaWNlgtzZ1ewfw
 
 {
-  "title": "The Hobbit",
+  "title": "A programmers book",
   "published": true,
   "authorId": "68470948446499fde05301bf"
 }

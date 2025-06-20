@@ -22,7 +22,7 @@ export class PostService {
     });
 
     if (!newPost) throw new InternalServerErrorException('Failed to create post.');
-    return { success: true, message: "New post created successfully.", newPost }
+    return { success: true, newPost }
   }
 
   async findAll(userId: string, publish?: boolean) {
@@ -34,7 +34,7 @@ export class PostService {
         },
       });
 
-      if (!posts.length) return { message: "No posts yet." };
+      if (!posts.length) return { success: true, message: "No posts yet." };
       return { success: true, posts };
     }
 
@@ -42,7 +42,7 @@ export class PostService {
       where: { authorId: userId },
     });
 
-    if (!posts.length) return { message: "No posts yet." };
+    if (!posts.length) return { success: true, message: "No posts yet." };
     return { success: true, posts };
   }
 
